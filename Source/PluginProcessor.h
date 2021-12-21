@@ -13,6 +13,14 @@
 //==============================================================================
 /**
 */
+/*
+* TODO List
+* ==============================================
+* click anywhere in window and play note
+* if you click and drag it'll change pitch
+* should we play a sound?
+* 
+*/
 class PFMProject0AudioProcessor  : public juce::AudioProcessor
 {
 public:
@@ -54,6 +62,7 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
 private:
+    bool shouldPlaySound = false;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PFMProject0AudioProcessor)
 };
